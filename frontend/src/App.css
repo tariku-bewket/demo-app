@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+input {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+label,
+button {
+  font-size: 1.2rem;
+}
