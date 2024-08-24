@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       // Send the data to the server
-      const response = await fetch(`${apiUrl}/login}`, {
+      const response = await fetch(`${apiUrl}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

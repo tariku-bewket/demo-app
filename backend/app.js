@@ -42,8 +42,11 @@ app.get("/", (req, res) => {
   res.status(200).json({ home: "Home" });
 });
 
+// import base url from .env file
+const base_url = process.env.BASE_URL;
+
 // POST request handler to add a new employee to the database
-app.post("/add-employee", async (req, res) => {
+app.post(`${base_url}/add-employee`, async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
 
   try {
@@ -72,7 +75,7 @@ app.post("/add-employee", async (req, res) => {
 });
 
 // Post request handler to login an employee who comes to this route /login
-app.post("/login", async (req, res) => {
+app.post(`${base_url}/login`, async (req, res) => {
   const { email, password } = req.body;
 
   try {
