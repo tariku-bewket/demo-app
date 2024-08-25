@@ -20,7 +20,7 @@ const AddEmployee = () => {
     const apiUrl = import.meta.env.VITE_API_URL;
 
     try {
-      const response = await fetch(`${apiUrl}/add-employee`, {
+      const response = await fetch(`${apiUrl}/api/add-employee`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       // Send the data to the server
-      const response = await fetch(`${apiUrl}/login`, {
+      const response = await fetch(`${apiUrl}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,13 +27,13 @@ const Login = () => {
       const result = await response.json();
 
       if (response.ok) {
-        console.log({ email, password });
         setSignedInMessage(result.message);
         setError(""); // Clear any previous errors
-      } else {
         console.log(result);
+      } else {
         setError(result.message);
         setSignedInMessage(""); // Clear success message
+        console.log(result);
       }
     } catch (err) {
       console.error("Error occurred:", err);
